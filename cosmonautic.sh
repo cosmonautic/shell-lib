@@ -90,7 +90,7 @@ function cosmonautic_macos_ensure_brew_formula {
       || cosmonautic_error_exit "unable to update brew"
 
       echo -e "installing $1"
-      brew install docker \
+      brew install $1 \
       && echo -e "$1 is installed" \
       || cosmonautic_error_exit "unable to install $1"
     fi
@@ -112,7 +112,7 @@ function cosmonautic_macos_ensure_brew_cask {
       || cosmonautic_error_exit "unable to update brew"
 
       echo -e "installing $1"
-      brew cask install docker \
+      brew cask install $1 \
       && echo -e "$1 is installed" \
       || cosmonautic_error_exit "unable to install $1"
     fi
